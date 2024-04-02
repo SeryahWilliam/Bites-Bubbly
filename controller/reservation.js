@@ -23,8 +23,8 @@ const create = async (req, res) => {
 const show = async (req, res) => {
     try {
         const reservation = await Reservation.findById(req.params.id);
-        const tables = await Table.find({reservation: reservation._id}); 
-        res.render('reservations/show', { reservation, tables }); 
+        const table = await Table.find({reservation: reservation._id}); 
+        res.render('reservation/show', { reservation, table }); 
     } catch (error) {
         res.send(error);
     }
