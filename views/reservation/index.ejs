@@ -1,0 +1,10 @@
+<h1>All Reservations</h1>
+<ul>
+  <% reservations.forEach(reservation => { %>
+    <a href="/reservations/<%= reservation._id %>">
+    <li>
+      <%= reservation.name %> - Guests: <%= reservation.numberOfGuests %>, Date: <%= new Date(reservation.date).toLocaleDateString() %>, Time: <%= reservation.time %>
+    </li>
+    </a>
+    <% }) %>
+</ul>
