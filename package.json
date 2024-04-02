@@ -1,0 +1,16 @@
+{
+  "name": "bites-bubbly",
+  "version": "1.0.0",
+  "description": "## Intro I'm trying to build a cool web app for a brunch spot, allowing customers to make a reservation on their own rather than having to call to do so.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

@@ -36,7 +36,7 @@ On the web app, go to reservations and inquiry and submit info for your reservat
 ### **_Screenshots_** 
 
 ### Wireframe: 
-![alt text](<Screenshot 2024-03-28 at 8.54.27 AM.png>)
+![alt text](Images/screenshot.png)
 
 
 
@@ -46,7 +46,7 @@ On the web app, go to reservations and inquiry and submit info for your reservat
 
 
 ##### Image header 1
-![alt text](Untitled.jpg) 
+![alt text](Images/Untitled.jpg) 
 
 
 #### Menu Images
