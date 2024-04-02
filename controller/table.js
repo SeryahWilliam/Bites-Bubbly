@@ -1,4 +1,4 @@
-const Reservations = require('../models/reservations')
+const Reservations = require('../models/reservation')
 
 exports.create = async (req, res) => {
     try {
