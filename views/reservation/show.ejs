@@ -7,23 +7,23 @@
   <p><strong>Date:</strong> <%= reservation.date.toDateString() %></p>
   <p><strong>Time:</strong> <%= reservation.time %></p>
   
-  <h2>Add Special Request</h2>
+  <h2>Special Requests</h2>
+
+  <h3>Add Special Request</h3>
   <form action="/reservations/<%= reservation._id %>/specialRequests" method="POST">
     <input type="text" name="requestType" placeholder="Request Type" required>
     <input type="text" name="details" placeholder="Details">
     <button type="submit">Add Request</button>
   </form>
 
-  <h2>Special Requests</h2>
   <ul>
     <% reservation.specialRequests.forEach(request => { %>
       <li><%= request.requestType %>: <%= request.details %></li>
     <% }) %>
   </ul>
 
-  <h2>Assigned Table</h2>
-  <p><strong>Table Number:</strong> <%= table.tableNumber %> - <%= table.location %>, Seats: <%= table.seatingCapacity %></p>
-
-  <a href="/reservations/<%= reservation._id %>/tables/assign">Assign Table</a>
+    <form action="/reservations/<%= reservation._id %>?_method=delete" method="POST">
+  <button type="delete button"> Delete Reservation </button>
+</form>
 
   <%- include('../partials/footer') %>

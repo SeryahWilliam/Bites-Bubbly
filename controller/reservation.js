@@ -16,11 +16,16 @@ const create = async (req, res) => {
 };
 
 const show = async (req, res) => {
+    console.log('show')
+    console.log(req.params.id)
     try {
-        const reservation = await Reservation.findById(req.params.id);
-        const table = await Table.find({reservation: reservation._id}); 
-        res.render('reservation/show', { reservation, table }); 
+        const reservation = await Reservation.findById (req.params.id);
+        // const table = await Table.find({reservation: reservation._id}); 
+        console.log(reservation)
+        // console.log(table)
+        res.render('reservation/show', { reservation, title: 'reservation details'}); 
     } catch (error) {
+        console.log(error)
         res.send(error);
     }
 };
@@ -29,7 +34,7 @@ const deleteReservation = async (req, res) => {
     try {
         const {id} = req.params;
         await Reservation.findByIdAndDelete(id);
-        res.send({message: 'Reservation successfully deleted'});
+        res.redirect('/reservations');
     } catch (err) {
         console.error('Error deleting reservation:' , err);
         res.status(500).send({error: 'An error occurred while deleting the reservation'});
