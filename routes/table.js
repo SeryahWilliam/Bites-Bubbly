@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const ticketsCtrl = require('../controller/table');
+const tableCtrl = require('../controller/table');
 
-// for a new Ticket Form
-router.get('/table/:id/tickets/new', tableCtrl.newTable);
 
-// for creating a Ticket
-router.post('/table/:id/table', tableCtrl.createTable);
+router.get('/table/:id/table/new', tableCtrl.newReservation);
+
+router.post('/table/:id/table', tableCtrl.createReservation);
 
 module.exports = router;

@@ -1,0 +1,13 @@
+<%- include('./partials/header') %>
+
+<h1>Special Request Details</h1>
+
+<div>
+    <h2>Reservation: <%= specialRequest.reservation ? specialRequest.reservation._id : 'N/A' %></h2>
+    <p>Request Type: <%= specialRequest.requestType %></p>
+    <p>Details: <%= specialRequest.details %></p>
+</div>
+
+<a href="/reservations/<%= specialRequest.reservation._id %>">Back to Reservation</a>
+
+<%- include('./partials/footer') %>

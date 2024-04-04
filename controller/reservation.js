@@ -3,21 +3,16 @@ const Table = require('../models/table');
 
 const index = async (req, res) => {
     const reservation = await Reservation.find({});
-    console.log(reservation);
-    res.render('reservation/index', { reservation });
+    res.render('reservation/index', { title: 'reservation',reservation });
 };
 
 function newReservation(req, res) {
-  let newRes = new Reservation();
-    const dt = newRes.date; 
-    let reservationDate = `${dt.getFullYear()}-${(dt.getMonth() + 1).toString().padStart(2, '0')}`;
-    reservationDate += `-${dt.getDate().toString().padStart(2, '0')}T${dt.toTimeString().slice(0, 5)}`;
-    res.render('reservation/new', { reservationDate });
+    res.render('reservation/new', {title:'Make A Reservation'});
 }
 
 const create = async (req, res) => {
     await Reservation.create(req.body);
-    res.redirect('/reservation');
+    res.redirect('/reservations');
 };
 
 const show = async (req, res) => {
@@ -30,9 +25,22 @@ const show = async (req, res) => {
     }
 };
 
+const deleteReservation = async (req, res) => {
+    try {
+        const {id} = req.params;
+        await Reservation.findByIdAndDelete(id);
+        res.send({message: 'Reservation successfully deleted'});
+    } catch (err) {
+        console.error('Error deleting reservation:' , err);
+        res.status(500).send({error: 'An error occurred while deleting the reservation'});
+        }
+    };
+
+
 module.exports = {
     index,
     new: newReservation,
     create,
-    show
+    show,
+    delete: deleteReservation
 };

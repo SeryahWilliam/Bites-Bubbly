@@ -11,4 +11,6 @@ router.post('/', reservationCtrl.create)
 // route to reservation's detail page
 router.get('/:id', reservationCtrl.show);
 
+router.delete('/:id', reservationCtrl.delete);
+
 module.exports = router;

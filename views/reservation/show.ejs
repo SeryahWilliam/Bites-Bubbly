@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Reservation Details</title>
-  <script defer src="script.js"></script>
-</head>
-<body>
+<%- include('../partials/header') %>
+
   <h1>Reservation Details</h1>
   <p><strong>Name:</strong> <%= reservation.name %></p>
   <p><strong>Phone Number:</strong> <%= reservation.phone %></p>
@@ -31,5 +26,4 @@
 
   <a href="/reservations/<%= reservation._id %>/tables/assign">Assign Table</a>
 
-</body>
-</html>
+  <%- include('../partials/footer') %>

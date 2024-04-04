@@ -1,0 +1,23 @@
+<%- include('./partials/header') %>
+
+<h1>Add Special Request for Reservation</h1>
+
+<form action="/reservations/<%= reservation._id %>/specialRequests" method="post">
+  <div>
+    <label for="requestType">Request Type</label>
+    <select name="requestType" id="requestType" required>
+      <option value="Seating Preference">Seating Preference</option>
+      <option value="Dietary Restrictions">Dietary Restrictions</option>
+      <option value="Accessibility Needs">Accessibility Needs</option>
+      <option value="Celebration">Celebration</option>
+ 
+    </select>
+  </div>
+  <div>
+    <label for="details">Details</label>
+    <textarea name="details" id="details" rows="4" required></textarea>
+  </div>
+  <button type="submit">Add Request</button>
+</form>
+
+<%- include('./partials/footer') %>
