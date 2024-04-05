@@ -10,6 +10,7 @@ I'm trying to build a cool web app for a brunch spot, allowing customers to make
     - **Visual Studio Code**
     - **Wireframe.cc**
     - **Git Hub**
+    - **Heroku Dev Center**
 - **Web Browsers:**
     - **Google Chrome**
     - **Safari**
@@ -39,29 +40,13 @@ On the web app, go to reservations and inquiry and submit info for your reservat
 ![alt text](Images/screenshot.png)
 
 
-
-
-
+#### About Me
+![alt text](Images/seryah.jpeg)
 
 
 
 ##### Image header 1
 ![alt text](Images/Untitled.jpg) 
-
-
-#### Menu Images
-![alt text](Images/image-1.png)
-![alt text](Images/image-2.png)
-![alt text](Images/image.png)
-![alt text](Images/image-3.png)
-![alt text](Images/image-4.png)
-![alt text](Images/image-5.png)
-![alt text](Images/image-6.png)
-![alt text](Images/image-7.png)
-![alt text](Images/image-8.png)
-![alt text](Images/image-9.png)
-![alt text](Images/image-10.png)
-
 
 
 #### **_Credits_**
@@ -71,5 +56,16 @@ Seryah William
 
 ##### Header Banner:
 https://www.shutterstock.com/create/editor 
+
+
+##### Social App Icons:
+https://icons8.com/icons/set/social-media 
+
+
+#### Styling Web Forms:
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Styling_web_forms 
+
+#### How to keep footer to the bottom of the page:
+https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b
 
 

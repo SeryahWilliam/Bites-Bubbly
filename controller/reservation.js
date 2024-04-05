@@ -16,16 +16,10 @@ const create = async (req, res) => {
 };
 
 const show = async (req, res) => {
-    console.log('show')
-    console.log(req.params.id)
     try {
         const reservation = await Reservation.findById (req.params.id);
-        // const table = await Table.find({reservation: reservation._id}); 
-        console.log(reservation)
-        // console.log(table)
         res.render('reservation/show', { reservation, title: 'reservation details'}); 
     } catch (error) {
-        console.log(error)
         res.send(error);
     }
 };

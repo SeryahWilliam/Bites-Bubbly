@@ -1,13 +1,17 @@
 <%- include('../partials/header') %>
 
 <h1>All Reservations</h1>
-<ul>
+<ul class="reservations">
   <% reservation.forEach(reservation => { %>
     <a href="/reservations/<%= reservation._id %>">
-    <li>
-      <%= reservation.name %> - Guests: <%= reservation.numberOfGuests %>, Date: <%= new Date(reservation.date).toLocaleDateString() %>, Time: <%= reservation.time %>
-    </li>
+      <li>
+        <span class="reservation-name"><%= reservation.name %></span> - 
+        Guests: <span class="reservation-guests"><%= reservation.numberOfGuests %></span>, 
+        Date: <span class="reservation-date"><%= new Date(reservation.date).toLocaleDateString() %></span>, 
+        Time: <span class="reservation-time"><%= reservation.time %></span>
+      </li>
     </a>
-    <% }) %>
+  <% }) %>
 </ul>
+
 <%- include('../partials/footer') %>
