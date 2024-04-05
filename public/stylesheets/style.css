@@ -231,3 +231,7 @@ footer {
   height: auto;
 }
 
+.hours-section ul, .hours-section ol {
+    text-decoration: none;
+    list-style-type: none;
+}
